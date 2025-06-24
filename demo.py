@@ -2,6 +2,7 @@ import mysql.connector
 
 print("建立資料庫連線中")
 
+# 若要連線至別人資料庫, 須請對方幫忙建立使用者與設定權限, 並提供Database的IP位置
 cnx = mysql.connector.connect(
     host = "127.0.0.1",
     port = 3306,
