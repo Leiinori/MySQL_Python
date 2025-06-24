@@ -19,11 +19,11 @@ dbcursor = cnx.cursor()
 print("執行insert")
 
 insertSQL = "insert into lottery(n1, n2, n3, n4, n5, n6) value(%s, %s, %s, %s, %s, %s)"
-parserdata = (5, 10, 15, 20, 25, 30)
+parserdata = (11, 3, 19, 42, 37, 20)
 
 dbcursor.execute(insertSQL, parserdata)
 print("完成交易 確定要寫入資料庫")
-cnx.commit()
+cnx.commit()    #沒commit就不寫入
 
 dbcursor.close()
 cnx.close()
